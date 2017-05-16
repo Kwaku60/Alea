@@ -1,0 +1,135 @@
+.navbar-default{
+    background-color: white;
+    border-bottom: solid darkgreen;
+}
+
+
+.container {
+    background-color: whitesmoke;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 10px;
+}
+
+#nav-pic {
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+}
+.nav-float-left {
+    margin-top: 20px;
+    margin-left: 40px;
+    float: left;
+    display: flex;
+
+}
+
+.nav-float-right {
+    float: right;
+    margin: 30px;
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+}
+
+.nav-hover {
+    background-color: white;
+    border: none;
+}
+
+.nav-hover:hover {
+   background: linear-gradient(
+    to bottom, 
+    white 90%, 
+    darkgreen 10%
+   );
+}
+
+h5 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+h2 {
+    margin-left: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.member-name {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+
+#body {
+    height: 35px;
+    width: 500px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.submit {
+    margin-left: 40px;
+}
+
+.btn {
+    background-color: darkgreen;
+}
+
+.btn:hover {
+    background-color: forestgreen;
+}
+
+#random-user {
+    background-color: darkgreen;
+    margin-left: 40px;
+}
+.body {
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+
+#post-well {
+    margin: 40px;
+}
+
+.post-submit {
+    margin-top: 5px;
+}
+
+.post-viewer {
+    height: 600px;
+    width: 500px;
+    margin-top:40px;
+    margin-bottom:40px;
+   text-align: center;
+   border: none;
+}
+
+.body {
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.form-div {
+    display: flex;
+}
+.reply-button {
+   /* height: 40px;
+    width: 200px;*/
+}
+
+.comment-input-general {
+    height: 50px;
+    width:300px;
+    margin-right: 10px;
+}
+
+
+
+
+
