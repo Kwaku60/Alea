@@ -1,5 +1,7 @@
 
-
+var postLoopPosition;
+var currentPostBodies = [];
+var formid;
 
 // $(document).ready(function() {
 $("#random-user").on("click", function(){
@@ -10,7 +12,13 @@ window.location.href = "/randomUser";
 });
 	
 
+$("#sign-out").on("click", function(){
 
+
+window.location.href = "/logout";
+
+
+})
 
 
 
@@ -364,61 +372,108 @@ for (var i = 0; i < data.length; i++) {
 
 
 
-  var commentContainer = $("<div>");
-                            var commentDisplay = $("<div>");
-
-                            //kwaku changes Teusday
-                            //deleted line with "<textarea>" code
-                            //added unique id to submit button
 
 
-                            commentDisplay.addClass("comment-display");
-                            var TextArea = document.createElement("textarea");
-                            TextArea.id = i;
-                            TextArea.setAttribute("class", "comment-input-general");
+ //     store the postBatch position in a variable 
+              postLoopPosition = i;
+
+
+  //     store post body as variable by assigning new value to currentPostBody
+              currentPostBodies.push(data[i].body);
+
+
+
+
+
+
+//use api incase article
+
+
+
+
+
+
+
+
+
+      //  3.) create a div  and giv this div an id of postLoopPosition
+          var HoldPost = document.createElement("div");
+          HoldPost.setAttribute("class", "hold-post");
+          HoldPost.id = "hold-p" + postLoopPosition;
+
+        //  4.) append the current post body to it. currentPostBody
+            // HoldPost.append(PostBatch[i].body);
+
+
+var userSearch = data[i].body;
+                         
+                            // console.log("User search: " + userSearch);
+ HoldPost.append(userSearch);
+                            var apiKey = "07ee4686e047984c7bb492";
+                            var URL = "http://iframe.ly/api/oembed?url=" + userSearch + "&api_key=" + apiKey
+                                //var URL = "http://iframe.ly/api/iframely?url=" + userSearch + "&api_key=" + apiKey
+                            $.ajax({
+                                url: URL,
+                                method: 'GET'
+                            }).done(function(response) {
+                     
+                                //var code = replace("//cdn", "http//:");
+                                // console.log(response.html);
+                                var thumb = $("<div>");
+                                HoldPost.append(thumb);
+                                thumb.addClass("thumb");
+                                thumb.append(response.html);
+                         
+                                $("#post-well").append(thumb);
+                                $("#post-well").append(form);
                             
-                            var submit = document.createElement("button");
-                          
-                            
+
+
+                            });
+
+
+
+
+    console.log("b");
+        //  5.) append this div to postWell
+            $("#post-well").append(HoldPost);
+
+        //    6.) create form and button with id postLoopPosition. 
+                //creating text area
+        var TextArea = document.createElement("textarea");
+                TextArea.id = postLoopPosition;
+                TextArea.setAttribute("class", "comment-input-general"); 
+
+                //creating reply button to submit comments in textbox                       
+                var submit = document.createElement("button");
+                submit.setAttribute("type", "submit");  
+                         submit.id = postLoopPosition;
+                submit.setAttribute("class", "btn btn-primary reply-button");
+
+                //creating div to hold form           
+                var formDiv = document.createElement("div");
+                formDiv.setAttribute("class", "form-div-test");
+                formDiv.append(TextArea);
+                formDiv.append(submit);
+    console.log("d");
+                //creating form 
+                var form = document.createElement("form");
+                form.setAttribute("class", "reply-submit");
+                form.id = postLoopPosition;
+
+                //apending form to div to hold it 
+                form.appendChild(formDiv);
                            
+                //appending form div with contents to post well
+                $("#post-well").append(form);
+             
 
+                //create a div to hold comments. later when we loop through the comments
+                // the moment we realize we've reached the last comment with the post, we will add 1 to
+                //the counter and will grab the reply-contain + [counterAmt] and append the replies there.
+                // $("#comment-well").append(replyContain);
 
-                            submit.setAttribute("type", "submit");
-                           
-                            submit.id = i;
-                              
-                      
-                            submit.setAttribute("class", "btn btn-primary reply-button");
-                          
-                            // submit.appendChild(document.createTextNode("reply"));
-
-                            var formDiv = document.createElement("div");
-                            formDiv.setAttribute("class", "form-div");
-                            formDiv.append(TextArea);
-                            formDiv.append(submit);
-
-var form = document.createElement("form");
-                            form.setAttribute("class", "reply-submit");
-                            form.id = submit.id;
-
-                            form.appendChild(formDiv);
-                           
-
-                            commentDisplay.append(form);
-                           
-
- var postViewer = $("<div>");
-                            postViewer.text(data[i].body);
-                            postViewer.addClass("post-viewer");
-                            postViewer.attr("id","" + i + "" ); 
-
-
-                            commentContainer.append(commentDisplay);
-                            postViewer.append(commentContainer);
-                            $("#post-well").prepend(postViewer);
-
-
-
+  
 
 
 

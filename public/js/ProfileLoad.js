@@ -21,6 +21,16 @@ window.location.href = "/newsFeed";
 })
 
 
+//onClick to logout
+$("#sign-out").on("click", function(){
+
+
+window.location.href = "/logout";
+
+
+})
+
+
 
 // 1.) onClick to go to random user route
 $("#random-user").on("click", function() {
@@ -106,7 +116,7 @@ var userSearch = PostBatch[i].body;
                                 //var code = replace("//cdn", "http//:");
                                 // console.log(response.html);
                                 var thumb = $("<div>");
-                                HoldPost.append(thumb);
+                                // HoldPost.append(thumb);
                                 thumb.addClass("thumb");
                                 thumb.append(response.html);
                          

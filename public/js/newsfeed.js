@@ -6,7 +6,13 @@
 
 
 
+$("#sign-out").on("click", function(){
 
+
+window.location.href = "/logout";
+
+
+})
 
 
 
@@ -39,14 +45,25 @@ for (var a = 0; a < 5; a++){
 // var randoPost2 = data[t+1].link;
 // console.log(randoPost);
 // console.log(randoPost2);
+console.log(data[a].link);
  
   PostRoster.push(data[a].link);
+  // PostRoster.push(data[a+1].link);
+   // PostRoster.push(data[a+2].link);
+   //  PostRoster.push(data[a+3].link);
+     // PostRoster.push(data[a+4].link);
+     // PostRoster.push(data[a+5].link);
+     // PostRoster.push(data[a+6].link);
+     // PostRoster.push(data[a+7].link);
+     // PostRoster.push(data[a+8].link);
+     // PostRoster.push(data[a+9].link);
+
 
 
 console.log(PostRoster);
-return PostRoster;
+// return PostRoster;
 
-};
+
 
 console.log(PostRoster);
 
@@ -58,10 +75,11 @@ console.log(PostRoster);
 var Viewer = $("<div>");
 Viewer.addClass("post-viewer");
 
-var userSearch = data[t].link;
-                         Viewer.append(data[t].link);
+var userSearch = data[a].link;
+                         // Viewer.append(data[a].link);
                          // Viewer.append(PostRoster[i]);
-                            // console.log("User search: " + userSearch);
+                            // console.log("User search: " + userSearch);var thumb = $("<div>");
+                        
 
                             var apiKey = "07ee4686e047984c7bb492";
                             var URL = "http://iframe.ly/api/oembed?url=" + userSearch + "&api_key=" + apiKey
@@ -73,12 +91,15 @@ var userSearch = data[t].link;
                                 // console.log(response);
                                 //var code = replace("//cdn", "http//:");
                                 // console.log(response.html);
-                                Viewer.append(response.html);
+                                var thumb = $("<div>");
+                                thumb.addClass("thumb");
+                                thumb.append(response.html);
+                                $("#post-well").append(thumb);
 
                             });
 
-
-$("#post-well").append(Viewer);
+};
+// $("#post-well").append(Viewer);
 
 
 

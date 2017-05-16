@@ -412,15 +412,33 @@ color: DarkGreen;
 	color: gold;
 	border-bottom: solid gold 6px;
 	font-family: 'Inknut Antiqua', serif;
-	font-size: 30px;
+	font-size: 35px;
 	margin-left: 376px;
-	width: 142px;
+	width: 242px;
+
+}
+
+
+.feed-sub-heading{
+	color: maroon;
+
+	font-family: 'Inknut Antiqua', serif;
+	font-size: 18px;
+	margin-left: 378px;
+	width: 192px;
+
+	margin-top: -28px;
+
 
 }
 
 .post-very-well{
 
 	font-size: 17px;
+	position: relative;
+	left: 170px;
+	width:770px;
+
 }
 
 #feed{
@@ -457,7 +475,8 @@ color: DarkGreen;
 }
 
 .replies-parent-container{
-	border: solid red;
+	border: solid DarkGreen .5px;
+	 
 	overflow: scroll;
 }
 
@@ -469,5 +488,17 @@ color: DarkGreen;
 .thumb{
 border: solid pink 2px;
 margin-top: 30px;
+}
+
+#comment-head{
+float: right;
+margin-right: 100px;
+width: 100px;
+}
+
+#post-head{
+
+	margin-left: 30px;
+	width: 200px;
 }
 
