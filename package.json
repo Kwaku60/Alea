@@ -19,5 +19,11 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "sequelize": "^3.27.0"
-  }
+  },
+
+  "engines": {
+  "node": "0.10.41",
+  "npm": "1.4.29"
+}
+
 }
