@@ -24,6 +24,27 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 require("./routes/post-api-routes.js")(app);
 
+
+
+
+
+
+if(process.env.DATABASE_URL){
+
+
+	sequelize = new Sequelize(process.env.DATABASE_URL,{
+		dialect: "postgres",
+		protocol: "postgres",
+		logging: true 
+	});
+} else {
+
+	sequelize = new Sequelize("postgres:///users")''
+}
+
+
+
+
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
