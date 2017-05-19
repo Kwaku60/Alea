@@ -251,8 +251,10 @@ $.get("/api/comments/" + currentPostBodies[z], function(data) {
           
 
         //    12.) append current comment to p
+       var referenceFull = data[m].body;
+       var referenceTrim = referenceFull.slice(0,25) + "...";
 
-              p.append("Re: " + data[m].body)
+              p.append("Re: " + referenceTrim);
               ptwo.append(data[m].userEmail);
             
 
