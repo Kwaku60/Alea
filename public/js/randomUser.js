@@ -580,7 +580,7 @@ function handleCommentSubmit(event){
  var match = this.id;
 
       
-     var textboxContent =  document.getElementById(match);
+     var textboxContent =  document.getElementById("hold-p" + match);
      console.log(textboxContent);
      var commentText = textboxContent.getElementsByTagName("textarea");
      console.log(commentText);
@@ -593,12 +593,7 @@ function handleCommentSubmit(event){
      var CommentedPostText = CommentedPost.firstChild.nodeValue;
      console.log(CommentedPostText);
 
-     // var commentPostTrim = CommentedPostText.substring(0, CommentedPostText.indexOf("r"));
-     //    console.log(commentTrim);
-        //store commentPostTrim as the value in the comment object some lines below.
-        //issue is if a user has an "r" in their post body, this function would trim out the "reply"
-//button text, but if it see's an r befrehand- it will trim out the rest. best to keep button blank for 
-//now so there is nothing needed to trim 
+     
 
 
 

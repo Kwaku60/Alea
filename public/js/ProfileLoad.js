@@ -171,15 +171,7 @@ var userSearch = PostBatch[i].body;
 
     console.log("e");
 
-                // var commentArea = document.createElement("div");
-                // commentArea.setAttribute("class", "comment-hold-container");
-                // commentArea.addClass("comment-area");
-          
-                // commentArea.id = "c" + postLoopPosition; 
-        
-                
-                // $("#post-well").append(commentArea);
-
+               
          //get commments
 //post loop ending here
 //solution- create a div that appends after post. Append the comments to this already creatediv
