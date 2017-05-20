@@ -580,7 +580,7 @@ function handleCommentSubmit(event){
  var match = this.id;
 
       
-     var textboxContent =  document.getElementById("hold-p" + match);
+     var textboxContent =  document.getElementById(match);
      console.log(textboxContent);
      var commentText = textboxContent.getElementsByTagName("textarea");
      console.log(commentText);
@@ -588,7 +588,7 @@ function handleCommentSubmit(event){
         console.log(comment);
 
 
- var CommentedPost=  document.getElementById(match);
+ var CommentedPost=  document.getElementById("hold-p" + match);
      console.log(CommentedPost);
      var CommentedPostText = CommentedPost.firstChild.nodeValue;
      console.log(CommentedPostText);
