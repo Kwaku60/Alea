@@ -165,7 +165,7 @@ border: solid lightGray 3.6px;
 	 border-radius: 5px;
 	 padding: 0px 20px 0px 20px;
 
-	 border: solid gold .107px; 
+	 border: solid gold 5px; 
 
 
 }
@@ -393,8 +393,9 @@ color: DarkGreen;
 	/*background-color: darkRed;*/
 	color:white;
 	border-radius: 7px;
-
-background-color: rgba(139, 0, 0, .92);
+/*
+background-color: rgba(139, 0, 0, .92);*/
+background-color: gold;
 	margin-top: 15px;
 	height:120px;
 	padding:20px 0px 0px 27px;
