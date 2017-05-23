@@ -253,19 +253,7 @@ $.get("/api/comments/" + currentPostBodies[z], function(data) {
               pthree.append(data[m].comment);
 
 
-   
-//grab the relevant comment area
-//     var relevantCommentArea = document.getElementById("c" + postLoopPosition);
-//     console.log(postLoopPosition);
-// console.log(relevantCommentArea);
-        //    13.) append  div for comments to postwell
-             
-// 
-              // if ( data[m].body = data[m + 1].body || !data[m-1].body)
 
-
-
-              // {
 
 
   $("#comment-well").append(replyContain);
@@ -273,14 +261,6 @@ $.get("/api/comments/" + currentPostBodies[z], function(data) {
 
 
 
-
-//               } else{
-
-// var replyContainNext = $("<div>");
-//    replyContainNext.addClass("reply-parent-container2");
-
-
-//               }
 
         //    [end of new loop with new letter]
               }
@@ -300,13 +280,6 @@ $.get("/api/comments/" + currentPostBodies[z], function(data) {
 
            }
 
-         		
-//creating a post
-
-
-//articles
-
-// create a new article post
 
 
 

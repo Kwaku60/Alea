@@ -132,6 +132,7 @@ border: solid lightGray 3.6px;
 	 border-radius: 5px;
 	 padding: 0px 20px 0px 20px;
 	 float: left;
+
 /*	 border: solid gold .107px;*/ 
 }
 
@@ -255,8 +256,9 @@ width: 400px;
 }
 
 .reply-button{
-	background-color: DarkGreen;
-	border: solid DarkGreen;
+/*	background-color: rgb(67, 33, 9);*/
+background-color: rosyBrown;
+	border: solid paleGoldenRod 1.5px;
 	color: smokeWhite;
 	border-radius: 32px;
 	width: 43px;
@@ -388,8 +390,11 @@ color: DarkGreen;
 	border-bottom:  solid DarkGreen 1px;
 	color: DarkSlateGray;
 /*	background-color: ivory;*/
-	background-color: white;
-	border-radius: 2px;
+	/*background-color: darkRed;*/
+	color:white;
+	border-radius: 7px;
+
+background-color: rgba(139, 0, 0, .92);
 	margin-top: 15px;
 	height:120px;
 	padding:20px 0px 0px 27px;
