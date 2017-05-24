@@ -95,7 +95,7 @@ var link = data[a].link
                                 thumb.addClass("thumb");
                                 thumb.append(response.html);
                          
-                                $("#article-well").append(thumb);
+                                $("#article-well-random").append(thumb);
                   
                   
 
@@ -241,7 +241,10 @@ function getComments(PostBody){
 
         //    11.) append current comment username to p
 
-              // p.append("Original Post:  " + data[m].body );
+              var referenceFull = data[i].body;
+       var referenceTrim = referenceFull.slice(0,25) + "...";
+
+              p.append("Re: " + referenceTrim);
           
 
         //    12.) append current comment to p
@@ -651,6 +654,9 @@ function submitComment(comment) {
             $.post("/api/comments", comment, function(event) {
           
                 // window.location.href = "/members";
+
+                $("#comment-sent").delay(250).show().delay(800).hide("fade",400);
+              
               
             });
         }
@@ -659,6 +665,8 @@ function submitComment(comment) {
 
 submitComment(newComment);
 
+
+//     $("#back9").delay(139960).show("fade", 5400).delay(7000).hide("fade", 6200);
 
 
 

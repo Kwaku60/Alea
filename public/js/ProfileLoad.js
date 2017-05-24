@@ -11,7 +11,7 @@ var bodyInput = $("#body");
 var bodyInput2 = $("#body2");
 
 
-// onClick to access newsFeedx
+// onClick to access newsFeed
 $("#feed").on("click", function(){
 
 
@@ -41,7 +41,7 @@ $("#random-user").on("click", function() {
 
 
 
-//
+
 // 2.) Larger function LOAD PROFILE
 
 function LoadProfile() {
@@ -52,7 +52,7 @@ function LoadProfile() {
      // 3.) get user data 
     $.get("/api/user_data").then(function(data) {
 
-//storing username
+//storing username, appending to page
         var userName = data.email;
          $(".member-name").text(userName);
 
@@ -82,9 +82,6 @@ function LoadProfile() {
 
 
 
-//use api incase article
-
-
 
 
 
@@ -97,13 +94,12 @@ function LoadProfile() {
   				HoldPost.setAttribute("class", "hold-post");
           HoldPost.id = "hold-p" + postLoopPosition;
 
-        //  4.) append the current post body to it. currentPostBody
-        		// HoldPost.append(PostBatch[i].body);
-
+         
+//store post url in a variable to send to the thumbnail api
 
 var userSearch = PostBatch[i].body;
                          
-                            // console.log("User search: " + userSearch);
+                       
  HoldPost.append(userSearch);
                             var apiKey = "07ee4686e047984c7bb492";
                             var URL = "http://iframe.ly/api/oembed?url=" + userSearch + "&api_key=" + apiKey
@@ -130,7 +126,7 @@ var userSearch = PostBatch[i].body;
 
 
 
-    console.log("b");
+
         // 	5.) append this div to postWell
         		$("#post-well").append(HoldPost);
 
@@ -151,7 +147,7 @@ var userSearch = PostBatch[i].body;
                 formDiv.setAttribute("class", "form-div-test");
                 formDiv.append(TextArea);
                 formDiv.append(submit);
-    console.log("d");
+
                 //creating form 
                 var form = document.createElement("form");
                 form.setAttribute("class", "reply-submit");
@@ -169,33 +165,35 @@ var userSearch = PostBatch[i].body;
                 //the counter and will grab the reply-contain + [counterAmt] and append the replies there.
                 // $("#comment-well").append(replyContain);
 
-    console.log("e");
+
 
                
          //get commments
-//post loop ending here
-//solution- create a div that appends after post. Append the comments to this already creatediv
+
 console.log(currentPostBodies);
-         		// 7.) pass the currentPostBody to get comments route	
-//[end of looping through larger loop = posts
+
+         	
+//end of looping through larger loop:  posts
+
              }
            
            for( var z=0; z<currentPostBodies.length; z++){
  
-            // var currentPostBody = currentPostBodies[z];
+            
+console.log(currentPostBodies[z])
 
-
-//think its stopping the loop at this get request
+  // 7.) pass the currentPostBody to get comments route 
 
 $.get("/api/comments/" + currentPostBodies[z], function(data) { 
-// alert("running2");
+
 
 
               //make sure this is the comment data, not the post data 
               console.log(data);
+
               var associatedComments = data;
 
-            //don't worry about empty array. there will be a textbox generated to separate posts
+          
 
 
 

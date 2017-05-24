@@ -50,6 +50,11 @@ background-color: Ivory;
 
 }
 
+#sign-out{
+
+	background-color: ivory;
+}
+
 #sign-up-heading{
 	margin-left: 20px;
 }
@@ -150,6 +155,19 @@ border: solid lightGray 3.6px;
 	 padding: 0px 20px 0px 20px;
 /*	 border: solid gold .107px;*/ 
 
+
+}
+
+#comment-sent{
+
+	color: green;
+	position:fixed;
+	font-size: 26px;
+	width: 200px;
+	height:100px;
+	left:620px;	
+font-family: 'Open Sans Condensed', sans-serif;
+display:none;
 
 }
 #article-well{

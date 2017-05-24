@@ -1,11 +1,4 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
 
-// Dependencies
-// =============================================================
-
-// Requiring our models
 var db = require("../models");
 
 // Routes
@@ -63,7 +56,7 @@ module.exports = function(app) {
 
     
       res.json(dbPost);
-console.log("grabbed");
+
 
     });
 
@@ -101,12 +94,7 @@ app.post("/api/comments", function(req, res) {
 //grab comments
 app.get("/api/comments/:body", function(req, res) {
 
-    // if (req.query.author_id) {
-    //   query.AuthorId = req.query.author_id;
-    // }
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
+  
     db.Comments.findAll({
       where: {
         body: req.params.body
@@ -132,8 +120,6 @@ app.get("/api/articleAll/", function(req, res) {
     });
 
   });
-
-
 
 
 };
