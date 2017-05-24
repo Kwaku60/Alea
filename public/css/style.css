@@ -93,10 +93,6 @@ border: solid lightGray 3.6px;
 		font-size: 16px;
 }
 
-.login-sign-label{
-
-	margin-right: 20px;
-}
 
 #form-welcome{
 	margin-left: 85px;
@@ -262,7 +258,7 @@ width: 400px;
 
 .reply-button{
 /*	background-color: rgb(67, 33, 9);*/
-background-color: rosyBrown;
+background-color: rgb(212,206,153);
 	border: solid paleGoldenRod 1.5px;
 	color: smokeWhite;
 	border-radius: 32px;
@@ -389,18 +385,17 @@ color: DarkGreen;
 
 .hold-post{
 
-	border-top: solid DarkGreen 1px;
-	border-left: solid DarkGreen 1px;
-	border-right:  solid DarkGreen 1px;
-	border-bottom:  solid DarkGreen 1px;
-	color: DarkSlateGray;
+	border: solid rgba(247, 240, 191,.65) 5px;
+	
+/*	color: DarkSlateGray;*/
 /*	background-color: ivory;*/
 	/*background-color: darkRed;*/
-	color:white;
+	color:gold;
+
 	border-radius: 7px;
 /*
 background-color: rgba(139, 0, 0, .92);*/
-background-color: gold;
+background-color: rgba(247, 240, 191,.15);
 	margin-top: 15px;
 	height:120px;
 	padding:20px 0px 0px 27px;
@@ -486,7 +481,7 @@ background-color: gold;
 }
 
 .replies-parent-container{
-	border: solid DarkGreen .5px;
+	border: solid rgba(247, 240, 191,.62) 2px;
 	 
 	overflow: scroll;
 }
