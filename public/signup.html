@@ -23,25 +23,23 @@
         <div class="container">    
             <div class="auth-modal">
             <div class = "head">
-                <h2 class="logo">Sign Up for Alea</h2>
+                <h2 class="logo" id="sign-up-welcome">Welcom to Alea</h2>
+                <h3 id="sign-up-tag"> Share news, share ideas</h3>
                 </div>
-                <form class="signup">
+                <form class="signup sign-contain">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label class="sign-label" >Email address</label>
                         <input type="email" class="form-control user-input" id="email-input" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
+                        <label class="sign-label">Password</label>
                         <input type="password" class="form-control user-input" id="password-input" placeholder="Password">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Location</label>
-                        <input type="email" class="form-control user-input" id="location" placeholder="City, State">
-                    </div>
-                    <button type="submit" class="btn btn-default">Sign Up</button>
+                    
+                    <button type="submit" class="btn btn-default sign-up-btn">Sign Up</button>
                 </form>
                 <br />
-                <p>Or log in <a href="login.html">here</a></p>
+                <p class="sign-label">Or log in <a href="login.html">here</a></p>
             </div>
         </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

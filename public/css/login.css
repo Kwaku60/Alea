@@ -7,27 +7,85 @@
 	height: 400px;
 /*	background-color: gray;*/
 }
+#sign-up-welcome{
+    font-family: 'Inknut Antiqua', serif;
+    color: darkGreen;
+    font-size: 17px;
 
+
+}
+
+
+#sign-up-tag{
+font-family: 'Inknut Antiqua', serif;
+    color: gold;
+     font-size: 14px;
+     margin-left: 150px;
+}
 .container-fluid {
     background-color: darkgreen;
     border: none;
 }
 #loginbackground {
-    background-image: url(../assets/science.jpg);
+    background-color: rgba(245,240,198,.325);
     background-size: cover;
 }
 
 #signupbackground {
-    background-image: url(../assets/egypt1.jpg);
+    background-color: rgba(245,240,198,.325);
     background-size: cover;
-    opacity: 9;
+  
+}
+
+.sign-label{
+
+    color: DarkGreen;
+        font-family: 'Inknut Antiqua', serif;
+}
+
+.sign-contain{
+
+    margin-top: 27px;
+}
+
+#password-input{
+
+    background-color: white;
+}
+
+#email-input{
+
+    color: white;
+    width:220px;
+}
+
+.sign-up-btn{
+
+    color: DarkGreen;
+    background-color: white;
+    border: solid DarkGreen;
+        font-family: 'Inknut Antiqua', serif;
+}
+
+.login-sign-label{
+
+   position:relative;
+   right:54px;
+   bottom:12px;
+}
+
+
+.login-contain{
+
+    margin-right: 50px;
 }
 .navbar {
     background-color: #77773c;
 }
 .head {
-    background-color: white;
+    background-color: White;
     color: black;
+    border: solid gold 1px;
     width: 50%;
     margin: 0 auto;
     border-radius: 10px;
